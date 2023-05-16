@@ -226,8 +226,8 @@ p {
 
 ## border
 
-- CSS 박스 모델의 border부분을 수정한다.
-- 아래 두가지 방법으로 표기할 수 있는데 주로 파일 용량을 줄이기 위해 한줄로 작성하는 걸 권장한다. 이때, 쉼표는 작성하지 않고 띄어쓰기로 순서는 상관없이 표기한다.
+- CSS 박스 모델의 border 영역을 수정한다.
+- border는 아래 방법처럼 한 줄 정리로 선언할 수 있는데, 주로 파일 용량을 줄이기 위해 한줄로 작성하는 걸 권장한다. 이때, 쉼표는 작성하지 않고 띄어쓰기로 순서는 상관없이 표기한다.
 
 ```css
 .paragraph {
@@ -243,9 +243,42 @@ p {
 
 ## background
 
+- CSS 박스 모델의 background 영역을 수정한다.
+- background도 border와 마찬가지로 한 줄 정리로 선언할 수 있다.
+
+```css
+.paragraph {
+  background: yellow url(이미지경로) no-repeat left;
+}
+
+.paragraph {
+  background-color: yellow;
+  background-image: url(이미지경로);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+```
+
 ### background 특징
 
--
+- background 영역을 꽉 채우려는 특징이 있는데 이미지 파일인 경우 반복효과가 일어난다. 이걸 제어하기 위해서 쓰는 것이 `background-repeat: 속성값;`이다.
+- 기본적으로 `repeat`상태이다.
+
+#### background-repeat
+
+- X축으로 반복 : `repeat-x`
+- Y축으로 반복 : `repeat-y`
+- 반복 해제 : `no-repeat`
+
+#### background-position
+
+- 공간 안에서 이미지의 좌표를 변경할 때 사용한다.
+- `top`, `botton`, `center`, `left`, `right`, `50%`, `100px` 등 사용가능 하다.
+
+## grid
+
+- 주요 영역을 나누거나 크기, 위치 등을 나누는 데 유용하다.
+- 전에는 배치하는데 `float`과 `clear`을 주로 썻지만 최근에는 `grid`와 `flex` 속성이 많이 쓰인다.
 
 # CSS 주석처리 방법
 
